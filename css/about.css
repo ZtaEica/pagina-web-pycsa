@@ -1,0 +1,350 @@
+main {
+  width: 100%;
+  max-width: 1300px;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Estilos del slider */
+#header-presentation {
+  position: relative;
+  height: 450px;
+  width: 100%;
+  margin-bottom: 7rem;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  height: 100%; /* Tres imágenes, cada una ocupa 100% */
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.linea {
+  width: 0; /* Ancho inicial */
+  height: 4px; /* Grosor de la línea */
+  background-color: #fa7017; /* Color de la línea */
+  margin: 0 auto; /* Centrar la línea */
+  transform: scaleX(0); /* Comienza comprimida */
+  transform-origin: left; /* Punto de inicio desde la izquierda */
+  transition: transform 1s ease-in-out;
+}
+
+.efect.animate .linea {
+  width: 400px;
+  max-width: 80%;
+  transform: scaleX(1);
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  66.66% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slider {
+  animation: slide 15s infinite;
+}
+
+#empresa {
+  max-width: 80%;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+#empresa h3 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#empresa p {
+  text-align: justify;
+}
+
+#empresa .linea {
+  width: 0; /* Ancho inicial */
+  height: 4px; /* Grosor de la línea */
+  background-color: #fa7017; /* Color de la línea */
+  margin-bottom: 50px;
+  transform: scaleX(0); /* Comienza comprimida */
+  transform-origin: left; /* Punto de inicio desde la izquierda */
+  transition: transform 1s ease-in-out;
+}
+
+#empresa.animate .linea {
+  width: 300px;
+  max-width: 50%;
+  transform: scaleX(1);
+}
+
+#lideres {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.lideres-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+}
+
+.texto-lideres {
+  flex: 1 1 50%;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.imagenes-lideres {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px 20px;
+  flex: 1 1 50%;
+}
+
+.imagenes-lideres .lider {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.imagenes-lideres img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.imagenes-lideres img:hover {
+  transform: scale(1.05);
+}
+.imagenes-lideres .name-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(250, 112, 23, 1);
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 1em;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.imagenes-lideres .lider:hover .name-overlay {
+  opacity: 1;
+}
+
+#mision-vision-etica {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.mision-vision {
+  display: inline-block;
+  width: 30%;
+  margin: 20px;
+}
+
+.mision-vision h3 {
+  color: #fa7017;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.mision-vision p {
+  color: black; /* Texto claro para contraste */
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#valores {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+#valores h2 {
+  font-size: 2rem;
+}
+
+#valores .linea {
+  width: 0; /* Ancho inicial */
+  height: 4px; /* Grosor de la línea */
+  background-color: #fa7017; /* Color de la línea */
+  margin: 0 auto; /* Centrar la línea */
+  margin-bottom: 2rem;
+  transform: scaleX(0); /* Comienza comprimida */
+  transform-origin: left; /* Punto de inicio desde la izquierda */
+  transition: transform 1s ease-in-out;
+}
+
+#valores.animate .linea {
+  width: 300px;
+  max-width: 50%;
+  transform: scaleX(1);
+}
+
+.valores-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.valores-container p {
+  font-weight: bold;
+  color: #fa7017;
+}
+
+.valor {
+  text-align: center;
+  margin: 10px;
+}
+
+.valor img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#instagram-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  padding: 5rem 0;
+}
+
+.insta-efect h2 {
+  font-size: 2rem;
+}
+.insta-efect .linea {
+  width: 0; /* Ancho inicial */
+  height: 4px; /* Grosor de la línea */
+  background-color: #fa7017; /* Color de la línea */
+  margin-bottom: 50px;
+  transform: scaleX(0); /* Comienza comprimida */
+  transform-origin: left; /* Punto de inicio desde la izquierda */
+  transition: transform 1s ease-in-out;
+}
+
+.insta-efect.animate .linea {
+  width: 300px;
+  max-width: 50%;
+  transform: scaleX(1);
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 20px;
+}
+
+.instagram-post {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.instagram-post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.instagram-post img:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+@keyframes zoomEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .efect.animate .linea {
+    max-width: 50%;
+  }
+  .lideres-container {
+    flex-direction: column;
+  }
+  .texto-lideres {
+    margin-bottom: 2rem;
+  }
+  #mision-vision-etica {
+    padding: 20px 0;
+  }
+  .instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .instagram-post img {
+    animation: zoomEffect 10s infinite ease-in-out;
+    transition: transform 0.3s;
+  }
+}

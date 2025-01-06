@@ -1,0 +1,28 @@
+.page {
+  opacity: 0;
+  position: relative; /* Para mantener su posición en el flujo */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Animaciones únicas */
+.page.from-top {
+  transform: translateY(-50px);
+}
+
+.page.from-bottom {
+  transform: translateY(50px);
+}
+
+.page.from-left {
+  transform: translateX(-50px);
+}
+
+.page.from-right {
+  transform: translateX(50px);
+}
+
+/* Cuando el elemento es visible */
+.page.visible {
+  opacity: 1;
+  transform: translate(0, 0); /* Volver al estado original */
+}

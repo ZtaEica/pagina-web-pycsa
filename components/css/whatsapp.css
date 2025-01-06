@@ -1,0 +1,247 @@
+/* Estilo general para el chat */
+.chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.chat-button {
+  background-color: #25d366;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-button img {
+  width: 100%;
+  height: 100%;
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 500px;
+  max-width: 92%;
+  background: url('../Fondos/Fondo-WhatsApp.png') no-repeat center/cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.chat-window.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.chat-header {
+  background-color: #075e54;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.chat-title {
+  font-weight: bold;
+}
+
+.chat-content {
+  padding: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-bubble {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word; /* Esta propiedad asegura que el texto largo se ajuste */
+}
+
+.chat-bubble.user {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  width: auto;
+  max-width: 90%;
+  align-self: flex-end; /* Alinea las burbujas del usuario a la derecha */
+  border-radius: 10px;
+}
+
+.chat-bubble.bot {
+  background-color: #e1ffc7;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  width: auto;
+  max-width: 90%;
+  align-self: flex-start; /* Alinea las burbujas del bot a la izquierda */
+  border-radius: 10px;
+}
+
+.chat-bubble.user::after {
+  content: '';
+  position: absolute;
+  right: 10px; /* Posiciona la flecha en la parte derecha de la burbuja */
+  bottom: -20px;
+  border-width: 11px 11px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent; /* Color verde de la burbuja del usuario */
+}
+
+.chat-bubble.bot::after {
+  content: '';
+  position: absolute;
+  left: 15px; /* Posiciona la flecha en la parte derecha de la burbuja */
+  bottom: -20px;
+  border-width: 11px 11px;
+  border-style: solid;
+  border-color: #e1ffc7 transparent transparent transparent; /* Color gris de la burbuja del bot */
+}
+
+/* Estilo para la hora en cada burbuja */
+.chat-bubble .time {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  align-self: flex-end;
+}
+
+.chat-actions {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #075e54;
+}
+
+.chat-input {
+  border: none;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  outline: none;
+  width: 85%;
+}
+
+.attach-button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.attach-button:hover {
+  transform: scale(1.1);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Indicador de escritura */
+.typing {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.typing span {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-color: #e1ffc7;
+  border-radius: 50%;
+  animation: bounce 1.5s infinite;
+}
+
+.typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.active-status {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 8px;
+  border-radius: 50%;
+  background-color: #25d366;
+  box-shadow: 0 0 5px rgba(37, 211, 102, 0.6);
+  vertical-align: middle;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(37, 211, 102, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.9);
+  }
+}
+
+.active-status {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.close-chat {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-chat:hover {
+  color: #ff4444;
+  transform: scale(1.2);
+  transition: transform 0.2s ease, color 0.2s ease;
+}

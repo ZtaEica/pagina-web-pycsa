@@ -1,0 +1,28 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+/*color: #fcf4e4;*/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

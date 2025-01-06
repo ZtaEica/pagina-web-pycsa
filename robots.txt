@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pycsa-eica-creator.netlify.app/sitemap.xml
