@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const animatableElements = document.querySelectorAll(
-    '.efect, #empresa, .service-title, .nosotros-title, .contactanos-title, .contact-title, #valores, .insta-efect'
+    '.efect, #empresa, .service-title, .nosotros-title, .contactanos-title, .contact-title, #valores, .insta-efect, .carousel-section'
   );
 
   // Función para verificar si un elemento está en el viewport

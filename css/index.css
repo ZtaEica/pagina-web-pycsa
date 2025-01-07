@@ -74,6 +74,22 @@ main {
   font-size: 2rem;
 }
 
+.carousel-section .linea {
+  width: 0;
+  height: 4px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0;
+  background-color: #fa7017;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s ease-in-out;
+}
+.carousel-section.animate .linea {
+  width: 200px;
+  transform: scaleX(1);
+}
+
 .carousel-container {
   position: relative;
   max-width: 80%;
@@ -262,7 +278,7 @@ main {
 }
 
 .efect .linea {
-  height: 3px;
+  height: 4px;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 0;
