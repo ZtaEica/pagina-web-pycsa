@@ -272,7 +272,7 @@ header {
     z-index: 2;
     opacity: 0;
     height: auto;
-    max-height: 400px;
+    max-height: 90vh;
     overflow-y: auto;
   }
 

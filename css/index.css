@@ -109,6 +109,7 @@ main {
   min-width: 100%;
   text-align: center;
   padding: 20px;
+  cursor: pointer;
 }
 
 .carousel-item img {
@@ -150,6 +151,109 @@ main {
 .carousel-btn:hover {
   background: #da6314;
   box-shadow: 0 0 10px #da63147d;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 50px;
+  transition: all 0.3s ease;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #fa7017;
+  width: 750px;
+  max-height: 85%;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.close {
+  color: #fa7017;
+  font-size: 30px;
+  font-weight: bold;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ff4500;
+}
+
+.product-list {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.product {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product h3 {
+  color: #fa7017;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product button {
+  background-color: #fa7017;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+  background-color: #e76714;
+}
+
+.product button {
+  background-color: #fa7017;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.product button:hover {
+  background-color: #e76714;
 }
 
 .cotiza {
@@ -914,6 +1018,18 @@ button[disabled] {
     width: 100%;
     max-width: 1200px;
     transition: all 1s ease-in-out;
+  }
+
+  .modal {
+    padding-top: 100px;
+  }
+
+  .modal-content {
+    max-width: 90%;
+  }
+
+  .product-list {
+    display: block;
   }
 
   .cotiza-text {
