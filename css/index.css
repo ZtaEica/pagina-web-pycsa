@@ -86,7 +86,7 @@ main {
   transition: transform 1s ease-in-out;
 }
 .carousel-section.animate .linea {
-  width: 200px;
+  width: 300px;
   transform: scaleX(1);
 }
 
@@ -625,8 +625,9 @@ button[disabled] {
   background-attachment: fixed;
 }
 
-.service-box.camaras {
-  background: url('../img/servicios/camara.jpg') no-repeat center/cover;
+.service-box.escolta {
+  background: url('https://img.freepik.com/fotos-premium/equipo-seguridad-vista-frontal-trabajando-juntos_23-2148404033.jpg?w=900')
+    no-repeat center/cover;
   background-attachment: fixed;
 }
 

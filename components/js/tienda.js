@@ -33,16 +33,18 @@ const productsData = {
       description: 'Alarma tradicional para protección del hogar.',
     },
   ],
-  access: [
+  taser: [
     {
-      name: 'Control de Acceso Biometrico',
+      name: 'Taser de Proyección (con dardos)',
       price: 250,
-      description: 'Sistema de control de acceso con huella dactilar.',
+      description:
+        'Dispara dardos conectados por cables a un cartucho que emite descargas eléctricas al impacto.',
     },
     {
-      name: 'Control de Acceso por Tarjeta',
+      name: 'Taser de Contacto Directo',
       price: 100,
-      description: 'Acceso mediante tarjetas RFID.',
+      description:
+        'Emiten descargas eléctricas al tocar la piel o la ropa del objetivo.',
     },
   ],
 };
